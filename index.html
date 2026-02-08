@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="assets/img/icon.png" alt="Pot Icon" class="logo">
+        <h1>Recipe Finder</h1>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <label for="searchInput" class="visually-hidden">Search Recipes</label>
+            <input type="text" id="searchInput" placeholder="Search for a recipe..." aria-label="Search recipes">
+            <button id="searchBtn" aria-label="Search for recipes">Search</button>
+            <button id="clearBtn" class="clear-btn">Clear</button>
+
+        </section>
+
+        <!--Recent searches section-->
+        <section id="recentSearches" class="recent-searches"></section>
+        <!--Spinner indicator-->
+        <section id="loading" class="loading hidden">
+            <div class="spinner"></div>
+        </section>
+
+        <section id="results" class="results-grid">
+            <!-- Results will be injected here -->
+        </section>
+    </main>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/search.js"></script>
+</body>
+</html>
