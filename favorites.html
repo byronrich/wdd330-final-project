@@ -1,10 +1,9 @@
-<!--Base Html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Details</title>
+    <title>Favorites</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -13,18 +12,11 @@
 
     <header class="header">
         <img src="assets/img/icon.png" alt="Pot Icon" class="logo">
-        <h1>Recipe Details</h1>
+        <h1>Your Favorite Recipes</h1>
     </header>
 
-    <main id="recipeContainer" class="recipe-container">
-        <!-- Recipe details will be injected here -->
-        <section id="detailsLoading" class="loading hidden">
-            <div class="spinner"></div>
-        </section>
+    <main id="favoritesContainer" class="results-grid"></main>
 
-    </main>
-
-    <script src="assets/js/api.js"></script>
-    <script src="assets/js/details.js"></script>
+    <script src="assets/js/favorites.js"></script>
 </body>
 </html>

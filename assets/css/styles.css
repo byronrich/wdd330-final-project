@@ -193,3 +193,70 @@ body {
     background: #bbb;
     transition: 0.3s;
 }
+/*css for recipe.html*/
+.recipe-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.recipe-header {
+    text-align: center;
+}
+
+.recipe-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.ingredients ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients li {
+    background: #fff;
+    padding: 8px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+}
+
+.fav-btn {
+    background: orange;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fav-btn:hover {
+    background: darkorange;
+    transition: 0.3s;
+}
+/*Back to search css*/
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+/*Responsive layout for details page*/
+@media (max-width: 600px) {
+    .recipe-img {
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .ingredients li {
+        font-size: 0.9rem;
+    }
+}
+
