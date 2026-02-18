@@ -1,3 +1,4 @@
+console.log("search.js loaded");
 import { fetchRecipes } from "./api.js";//start of initial logic for search.js
 
 const searchBtn = document.getElementById("searchBtn");
@@ -50,7 +51,13 @@ async function searchRecipes(query) {
     resultsContainer.innerHTML = "";
     loadingIndicator.classList.remove("hidden");
 
-    const recipes = await fetchRecipes(query);
+    const recipes = await fetchRecipes(query, filters);
+    const filters = {
+        vegetarian: document.getElementById("vegFilter").checked,
+        vegan: document.getElementById("veganFilter").checked,
+        glutenFree: document.getElementById("glutenFilter").checked
+    };
+
 
     loadingIndicator.classList.add("hidden");
     // if an error occurs
