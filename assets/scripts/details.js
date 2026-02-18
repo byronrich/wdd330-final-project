@@ -1,3 +1,4 @@
+console.log("details.js loaded");
 // Import the API function that fetches recipe details
 import { fetchRecipeDetails } from "./api.js";
 
@@ -58,14 +59,15 @@ function renderRecipe(recipe) {
             <h3>Ingredients</h3>
             <ul>
                 ${recipe.extendedIngredients
-                    .map(ing => `<li>${ing.original}</li>`)
-                    .join("")}
+                    ? recipe.extendedIngredients.map(ing => `<li>${ing.original}</li>`).join("")
+                    : "<li>No ingredients available.</li>"}
+
             </ul>
         </section>
 
         <section class="instructions">
             <h3>Instructions</h3>
-            <p>${recipe.instructions || "No instructions available."}</p>
+            <p>${recipe.instructions || recipe.summary || "No instructions available."}</p>
         </section>
     `;
 }

@@ -2,12 +2,8 @@ const API_KEY = "ddcc86e69f93415d8beea53d5e963785";
 const BASE_URL = "https://api.spoonacular.com/recipes/complexSearch";
 
 // Unified fetchRecipes function
-export async function fetchRecipes(query, filters = {}) {
+export async function fetchRecipes(query,) {
     let url = `${BASE_URL}?apiKey=${API_KEY}&query=${encodeURIComponent(query)}&number=12`;
-
-    if (filters.vegetarian) url += "&diet=vegetarian";
-    if (filters.vegan) url += "&diet=vegan";
-    if (filters.glutenFree) url += "&intolerances=gluten";
 
     try {
         const response = await fetch(url);

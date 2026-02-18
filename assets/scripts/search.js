@@ -51,14 +51,8 @@ async function searchRecipes(query) {
     resultsContainer.innerHTML = "";
     loadingIndicator.classList.remove("hidden");
 
-    const recipes = await fetchRecipes(query, filters);
-    const filters = {
-        vegetarian: document.getElementById("vegFilter").checked,
-        vegan: document.getElementById("veganFilter").checked,
-        glutenFree: document.getElementById("glutenFilter").checked
-    };
-
-
+    const recipes = await fetchRecipes(query);
+   
     loadingIndicator.classList.add("hidden");
     // if an error occurs
     if (recipes === null) {
