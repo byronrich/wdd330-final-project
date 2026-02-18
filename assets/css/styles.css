@@ -259,4 +259,13 @@ body {
         font-size: 0.9rem;
     }
 }
+.header {
+    color: white;
+}
+
+.header h1,
+.header a,
+.header .nav-link {
+    color: white;
+}
 
